@@ -1,15 +1,13 @@
-export default function PersonaCard({persona}){
+
+
+export default function PersonaCard(props){
+
     return (
-        <div className="persona">
-            <p>Nombre:</p>
-            <span>{persona.nombre}</span>
-            <p>Apellido:</p>
-            <span>{persona.apellido}</span>
-            <p>Email:</p>
-            <span>{persona.email}</span>
-            <p>Edad:</p>
-            <span>{persona.edad}</span>
-           
+        <div className="card">
+            <p>Nombre: {props.persona.nombre}</p>
+            <p>Apellido: {props.persona.apellido}</p>
+            <p>Email: {props.persona.email}</p>
+            <p>Edad: {props.persona.edad}</p>
         </div>
     )
 }
