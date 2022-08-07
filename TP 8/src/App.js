@@ -1,4 +1,5 @@
 import './App.css';
+import Navbarhome from './components/Navbar';
 import Router from './router';
 
 
