@@ -63,8 +63,7 @@ li {
   background-color: #ffffff;
   margin: 5px;
   border: solid;
-  border-width: thin;
-  border-color: #e5e5e5;
+  box-shadow: #ee6bbc 0px 0px 10px;
 }
 
 .content {
@@ -115,4 +114,8 @@ h1 {
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #ee6bbc !important;
   border: #ee6bbc !important;
+}
+
+h2 {
+  color: #ee6bbc;
 }

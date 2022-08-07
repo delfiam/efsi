@@ -1,17 +1,19 @@
 import { useParams } from "react-router-dom";
 import PersonaCard from "../components/PersonaCard";
+import Button from "react-bootstrap/Button";
+import Navbarhome from "../components/Navbar";
 export default function Persona({ personas }) {
     const { id } = useParams();
     let persona = personas.filter(p => p.id === id)
     console.log(persona)
     let p = persona[0]
     return (
-        <div className="persona">
-
-            <p>Nombre: {p.nombre}</p>
-            <p>Apellido: {p.apellido}</p>
-            <p>Email: {p.email}</p>
-            <p>Edad: {p.edad}</p>
+        <div>
+            <Navbarhome personas={personas}></Navbarhome>
+            <div className="container">
+                <PersonaCard persona={p}></PersonaCard>
+                <Button variant="primary" href="/"> Volver </Button>
             </div>
+        </div>
     )
 }

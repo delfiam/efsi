@@ -14,7 +14,7 @@ import { RiContactsFill } from "react-icons/ri";
 function Navbarhome({ personas }) {
     return (
         <Navbar collapseOnSelect expand="xl" variant="dark">
-            <Navbar.Brand href="#"> Directorio de <IoIosPerson />
+            <Navbar.Brand href="/"> Directorio de <IoIosPerson />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
