@@ -4,9 +4,8 @@ import Estadisticas from "../pages/Estadisticas";
 import Personas from "../Personas";
 import Contacto from "../pages/Contacto";
 import Home from "../pages/Home";
-import Layout from "../pages/Layout";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbarhome from "../components/navbar";
+import Navbarhome from "../components/Navbar";
 
 export default function Router  (){
     return(

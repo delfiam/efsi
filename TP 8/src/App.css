@@ -94,3 +94,7 @@ h2{
 .link {
   color: rgba(0, 0, 0, .5)
 }
+.navbar,
+.navbar-default {
+    background-color: #F56E7F !important;
+}
