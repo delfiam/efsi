@@ -1,19 +1,20 @@
+import React, {useState} from 'react'
 import './App.css';
-import { citas } from './components/FormCita';
 import Listado from './components/Listado';
 import CrearCita from './components/CrearCIta';
 
-function App() {
 
+function App() {
+  const [citas, setCitas] = useState([])
   return (
-    <div id="root">
+    <div>
       <h1>
         Administrador de pacientes
       </h1>
       <div className='container'>
         <div className='row'>
-          <CrearCita></CrearCita>
-          <Listado citas={citas}></Listado>
+          <CrearCita citas={setCitas}></CrearCita>
+          <Listado props={{citas, setCitas}}></Listado>
         </div>
       </div>
     </div>
