@@ -15,7 +15,7 @@ export default function Form() {
                                 />
                                 <label htmlFor="ciudad">Ciudad:</label>
                             </div>
-                            <div className="input-field col s12">
+                            <div className="input-field">
                                 <select name="pais" id="pais">
                                     <option value="">-- Seleccion un Pais --</option>
                                     <option value="US">Estados Unidos</option>
