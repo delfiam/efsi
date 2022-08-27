@@ -1,6 +1,9 @@
 // Formulario (tiene los filtros de busqueda)
+import React, {useState} from 'react';
 
+import React, {useState} from 'react';
 export default function Form() {
+   //usar el usestate
     return (
         <div className="contenedor-form">
             <div className="container">
@@ -8,14 +11,16 @@ export default function Form() {
                     <div className="col m6 s12">
                         <form>
                             <div className="input-field col s12">
+                            <label htmlFor="ciudad">Ciudad:</label>
                                 <input
                                     type="text"
                                     name="ciudad"
                                     id="ciudad"
                                 />
-                                <label htmlFor="ciudad">Ciudad:</label>
+                              
                             </div>
                             <div className="input-field">
+                            <label htmlFor="pais">Pais:</label>
                                 <select name="pais" id="pais">
                                     <option value="">-- Seleccion un Pais --</option>
                                     <option value="US">Estados Unidos</option>
@@ -26,7 +31,7 @@ export default function Form() {
                                     <option value="ES">España</option>
                                     <option value="PE">Perú</option>
                                 </select>
-                                <label htmlFor="pais">Pais:</label>
+                           
                             </div>
                             <div className="input-field col s12">
                                 <input
