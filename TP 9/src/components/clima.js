@@ -12,9 +12,11 @@ para que la temperatura se muestre en la unidad de medida que conocemos hay que 
 
 import axios from "axios";
 
-function llamarAPI(pais, ciudad) {
+export default function llamarAPI(pais, ciudad) {
   axios.get("http://api.openweathermap.org/data/2.5/weather?q=" +ciudad+ ',' + pais)
   .then (res=> {
+    let ciudadT = document.getElementById('ciudad');
+    ciudadT.innerText = res;
 
   })
   .catch(error => {
