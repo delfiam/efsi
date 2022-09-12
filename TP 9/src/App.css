@@ -37,8 +37,11 @@
   }
 }
 
-.navbar,
-.navbar-default {
-  background-color: #6bc4ee !important;
+.nav {
+  background-color: #6bc4ee;
   margin-bottom: 10px;
+}
+ 
+.nav.container{
+  justify-content: center!important;
 }

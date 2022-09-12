@@ -1,7 +1,5 @@
 // Formulario (tiene los filtros de busqueda)
 import React, {useState} from 'react';
-
-import React, {useState} from 'react';
 export default function Form() {
    //usar el usestate
     return (
