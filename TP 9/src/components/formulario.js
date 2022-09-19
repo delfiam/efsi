@@ -1,5 +1,6 @@
 // Formulario (tiene los filtros de busqueda)
 import React, {useState} from 'react';
+import llamarAPI from './clima';
 export default function Form() {
    //usar el usestate
     return (
@@ -34,7 +35,7 @@ export default function Form() {
                             <div className="input-field col s12">
                                 <input
                                     type="submit"
-                                    value="Buscar Clima"
+                                    value="Buscar Clima" onClick={llamarAPI()}
                                     className="waves-effect waves-light btn-large btn-block yellow accent-4"
                                 />
                             </div>

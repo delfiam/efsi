@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Form from './components/formulario';
 import Header from './components/header';
+import Clima from './components/clima';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <div>
         <Form/>
     </div>    
+    <div>
+      <Clima></Clima>
+    </div>
     </div>
   );
 }
