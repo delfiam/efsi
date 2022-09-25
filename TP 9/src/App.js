@@ -7,15 +7,9 @@ import Clima from './components/clima';
 function App() {
   return (
     <div>
-    <div>
-      <Header></Header>
-      </div>
-      <div>
-        <Form/>
-    </div>    
-    <div>
-      <Clima></Clima>
-    </div>
+   <Header/>
+<Form/>
+
     </div>
   );
 }

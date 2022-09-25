@@ -14,10 +14,14 @@ import axios from "axios";
 
 export default function Clima() {
 function llamarAPI(pais, ciudad) {
-  axios.get("http://api.openweathermap.org/data/2.5/weather?q=" +ciudad+ ',' + pais)
+  axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&APPID=467eb2e2a1738c82e813a30610d7c354`)
   .then (res=> {
+    console.log(res);
     let ciudadT = document.getElementById('ciudad');
-    ciudadT.innerText = res;
+    ciudadT.innerText = `${res.data.ciudad}`;
+    let paisT = document.getElementById('pais');
+    paisT.innerText = `${res.data.pais}`;
+    console.log(res.data);
 
   })
   .catch(error => {
@@ -26,7 +30,7 @@ function llamarAPI(pais, ciudad) {
   })
 }
     return (
-     <Text>{res}</Text>
+     <Text>hola</Text>
     )
     
   }
