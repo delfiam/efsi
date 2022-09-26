@@ -12,6 +12,8 @@ export default function Home() {
     const [pais, setPais] = useState('');
     const [ciudad, setCiudad] = useState('');
     const [temperatura, setTemp] = useState({temp_max: 0, temp_min: 0, temp: 0});
+    const [success, setSuccess] = useState(false);
+
     const llamarAPI = () => {
         console.log("llamando a la api");
         console.log(pais);
@@ -24,6 +26,7 @@ export default function Home() {
                 .then(res => {
                     console.log(res);
                     console.log(res.data);
+                    setSuccess(true);
                     const kelvin = 273.15;
                     const temp = parseInt(res.data.main.temp) - kelvin;
                     const temp_max = parseInt(res.data.main.temp_max) - kelvin;
@@ -42,7 +45,7 @@ export default function Home() {
         <div>
             <Header />
             <Form llamarAPI={llamarAPI} setCiudad={setCiudad} setPais={setPais} />
-            <Clima temperatura={temperatura}/>
+           { success == false ? '' : <Clima temperatura={temperatura} ciudad={ciudad}/>}
         </div>
     );
 }
