@@ -12,18 +12,16 @@ console.log(props.temperatura.temp)
   return (
     <div className="col m6 s12">
       <div className="card-panel white col s12">
-        <div className="black-text">
+        <div className="clima">
           <h2>El clima de {props.ciudad} es:</h2>
           <p className="temperatura">
-       {Math.round(props.temperatura.temp)} <span> &#x2103; </span>
+       {Math.round(props.temperatura.temp)} <span> °C </span>
           </p>
           <p>
-            Temperatura Maxima
-             {Math.round(props.temperatura.temp_max)} <span> &#x2103; </span>
+            Temperatura Maxima:  {Math.round(props.temperatura.temp_max)} <span> °C </span>
           </p>
           <p>
-            Temperatura Minima
-             {Math.round(props.temperatura.temp_min)} <span> &#x2103; </span>
+            Temperatura Minima: {Math.round(props.temperatura.temp_min)} <span> °C </span>
           </p>
         </div>
       </div>

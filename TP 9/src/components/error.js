@@ -2,8 +2,10 @@
 
 import React from 'react';
 
-export default function Error() {
+export default function Error(props) {
     return (
-       <p style={{backgroundColor: 'pink'}}>error</p>
+       <div className='errordiv'>
+        <p id="error">{props.errortext}</p>
+       </div>
     )
 }

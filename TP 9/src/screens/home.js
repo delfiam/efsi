@@ -15,13 +15,16 @@ export default function Home() {
     const [temperatura, setTemp] = useState({ temp_max: 0, temp_min: 0, temp: 0 });
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const [errortext, setErrortext] = useState('')
 
     const llamarAPI = () => {
         console.log("llamando a la api");
         console.log(pais);
         event.preventDefault();
         if ((pais === '') || (ciudad === "")) {
-            console.log("no hay datos");
+            setSuccess(false);
+            setError(true);
+            setErrortext("No hay datos ingresados");
         }
         else {
             return axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + ciudad + ',' + pais + '&APPID=467eb2e2a1738c82e813a30610d7c354')
@@ -29,6 +32,7 @@ export default function Home() {
                     console.log(res);
                     console.log(res.data);
                     setSuccess(true);
+                    setError(false);
                     const kelvin = 273.15;
                     const temp = parseInt(res.data.main.temp) - kelvin;
                     const temp_max = parseInt(res.data.main.temp_max) - kelvin;
@@ -39,8 +43,10 @@ export default function Home() {
                 })
                 .catch(error => {
                     console.error('error', error);
-                    console.log('ERRRORRR');
                     setError(true);
+                    setSuccess(false);
+                    setErrortext("Los datos ingresados son incorrectos. Por favor, ingresarlos correctamente")
+                    console.log(errortext)
                 })
         }
     }
@@ -53,7 +59,7 @@ export default function Home() {
             </div>
             <div className="col m6 s12">
             {success == false ? '' : <Clima temperatura={temperatura} ciudad={ciudad} />}
-            {error == false ? '' : <Error />}
+            {error == false ? '' : <Error errortext = {errortext}/>}
             </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 // Formulario (tiene los filtros de busqueda)
 import React, { useState } from 'react';
-import storm from '../img/storm.gif'
+import sun from '../img/sun.gif'
 import Select from 'react-select';
 
 export default function Form(props) {
@@ -19,7 +19,7 @@ export default function Form(props) {
                 <div className="row">
                     <div className="col m6 s12">
                         <h1 >¡Bienvenido!</h1>
-                        <img src={storm} style={{width: '40%'}}></img>
+                        <img src={sun} style={{width: '35%'}}></img>
                         <h2>¿De qué ciudad eres? </h2>
                         <form onSubmit={props.llamarAPI}>
                             <div>

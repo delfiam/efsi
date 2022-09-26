@@ -58,13 +58,14 @@
 }
 .home{
   background-color: #83C6DE;
+  color: white;
   width: 100%!important;
   height: 100%!important;
-  margin: 0;
   font-family: Arial;
   max-width: 100%!important;
   overflow-x: hidden!important;
   position: absolute;
+  text-align: center;
 }
 .form {
   background-color: #83C6DE;
@@ -101,4 +102,16 @@
   width: 40%;
   height: 50%;
   margin-top: 10px;
+}
+.errordiv {
+  background-color: rgba(241, 4, 4, 0.801);
+  margin: 20px;
+  border-radius: 10px;
+  border-color: rgba(241, 4, 4, 0.801);
+  align-content: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+.clima {
+  margin-top: 20px;
 }
