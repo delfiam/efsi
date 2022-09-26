@@ -5,6 +5,7 @@ Ejemplo de url: http://api.openweathermap.org/data/2.5/weather?q=buenos%20aires,
 import Form from "../components/formulario";
 import Header from "../components/header";
 import Clima from "../components/clima";
+import Error from "../components/error";
 import React, { useState } from 'react';
 import axios from "axios";
 
@@ -13,6 +14,7 @@ export default function Home() {
     const [ciudad, setCiudad] = useState('');
     const [temperatura, setTemp] = useState({temp_max: 0, temp_min: 0, temp: 0});
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
 
     const llamarAPI = () => {
         console.log("llamando a la api");
@@ -36,8 +38,9 @@ export default function Home() {
                     console.log(temperatura.temp)
                 })
                 .catch(error => {
-                    console.error('error', error)
-                    alert('Datos incorrectos')
+                    console.error('error', error);
+                    console.log('ERRRORRR');
+                    setError(true);
                 })
         }
     }
@@ -46,6 +49,7 @@ export default function Home() {
             <Header />
             <Form llamarAPI={llamarAPI} setCiudad={setCiudad} setPais={setPais} />
            { success == false ? '' : <Clima temperatura={temperatura} ciudad={ciudad}/>}
+           { error == false ? '' : <Error />}
         </div>
     );
 }
