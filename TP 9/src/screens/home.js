@@ -1,3 +1,7 @@
+/*Key de api: 467eb2e2a1738c82e813a30610d7c354
+
+Ejemplo de url: http://api.openweathermap.org/data/2.5/weather?q=buenos%20aires,argentina&APPID=467eb2e2a1738c82e813a30610d7c354
+ */ 
 import Form from "../components/formulario";
 import Header from "../components/header";
 import Clima from "../components/clima";
@@ -9,10 +13,9 @@ export default function Home() {
     const [ciudad, setCiudad] = useState('');
     const llamarAPI = () => {
         console.log("llamando a la api");
-       
         console.log(pais);
         event.preventDefault();
-        if ((pais === undefined) || (ciudad === "")) {
+        if ((pais === '') || (ciudad === "")) {
             console.log("no hay datos");
         }
         else {
@@ -20,6 +23,11 @@ export default function Home() {
                 .then(res => {
                     console.log(res);
                     console.log(res.data);
+                    const kevin = 273.15;
+                    const temp = parseInt(res.data.main.temp) - kevin;
+                    const temp_max = parseInt(res.data.main.temp_max) - kevin;
+                    const temp_min = parseInt(res.data.main.temp_min) - kevin;
+                    console.log(temp)
                 })
                 .catch(error => {
                     console.error('error', error)
