@@ -7,10 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Header() {
   return (
-    <Navbar  expand="lg" className='nav'>
+    <Navbar expand="lg" className='nav'>
       <Container className='nav container'>
-        <Navbar.Brand href="#home" >TP 9</Navbar.Brand>
+        <Navbar.Brand href="#home" style={{ color: 'white' }} >TP 9 ☼ Clima ! </Navbar.Brand>
       </Container>
     </Navbar>
-    )
+  )
 }

@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background-color: #83C6DE;
+  width: 100%!important;
+  height: 100%!important;
+  margin: 0;
+  font-family: Arial;
+  max-width: 100%!important;
+  overflow-x: hidden!important;
+  position: absolute;
 }
 
 .App-logo {
@@ -38,10 +46,59 @@
 }
 
 .nav {
-  background-color: #C7E9FF;
+  background-color: #99D4DE;
   margin-bottom: 10px;
+  font-family: Arial;
+  font-weight: 600;
+  color: white!important;
 }
  
 .nav.container{
   justify-content: center!important;
+}
+.home{
+  background-color: #83C6DE;
+  width: 100%!important;
+  height: 100%!important;
+  margin: 0;
+  font-family: Arial;
+  max-width: 100%!important;
+  overflow-x: hidden!important;
+  position: absolute;
+}
+.form {
+  background-color: #83C6DE;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+.input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  width: 40%;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold !important;
+}
+.boton {
+  background-color: #99D4DE !important;
+  color: white;
+  border-radius: 10px;
+  border-color: white;
+  width: 40%;
+  height: 50%;
+  margin-top: 10px;
 }

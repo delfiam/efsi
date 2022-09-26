@@ -1,5 +1,6 @@
 // Formulario (tiene los filtros de busqueda)
 import React, { useState } from 'react';
+import storm from '../img/storm.gif'
 import Select from 'react-select';
 
 export default function Form(props) {
@@ -13,30 +14,39 @@ export default function Form(props) {
         { value: 'PE', label: 'Peru' },
     ]
     return (
-        <div className="contenedor-form">
+        <div className="form">
             <div className="container">
                 <div className="row">
                     <div className="col m6 s12">
+                        <h1 >¡Bienvenido!</h1>
+                        <img src={storm} style={{width: '40%'}}></img>
+                        <h2>¿De qué ciudad eres? </h2>
                         <form onSubmit={props.llamarAPI}>
-                            <div className="input-field col s12">
+                            <div>
+                                <div className="label">
                                 <label htmlFor="ciudad">Ciudad:</label>
+                                </div>
                                 <input
                                     type="text"
                                     name="ciudad"
                                     id="ciudad"
                                     onChange={c => props.setCiudad(c.target.value)}
+                                    className="input"
+                                    style={{height: '30px'}}
                                 />
 
                             </div>
-                            <div className="input-field">
+                            <div>
+                                <div className='label'>
                                 <label htmlFor="pais">Pais:</label>
-                                <Select options={opciones} id="pais" name="pais" placeholder="Selecciona tu país" onChange={c => props.setPais(c.value)} />
+                                </div>
+                                <Select options={opciones} id="pais" name="pais" placeholder="Selecciona tu país" onChange={c => props.setPais(c.value)} className='input'/>
                             </div>
-                            <div className="input-field col s12">
+                            <div >
                                 <input
                                     type="submit"
-                                    value="Buscar Clima"
-                                    className="waves-effect waves-light btn-large btn-block yellow accent-4"
+                                    value="Buscar Clima ☼"
+                                    className="boton"
                                 />
                             </div>
                         </form>
