@@ -11,6 +11,7 @@ import axios from "axios";
 export default function Home() {
     const [pais, setPais] = useState('');
     const [ciudad, setCiudad] = useState('');
+    const [temperatura, setTemp] = useState({temp_max: 0, temp_min: 0, temp: 0});
     const llamarAPI = () => {
         console.log("llamando a la api");
         console.log(pais);
@@ -19,15 +20,17 @@ export default function Home() {
             console.log("no hay datos");
         }
         else {
-            const { data } = axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + ciudad + ',' + pais + '&APPID=467eb2e2a1738c82e813a30610d7c354')
+            return axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + ciudad + ',' + pais + '&APPID=467eb2e2a1738c82e813a30610d7c354')
                 .then(res => {
                     console.log(res);
                     console.log(res.data);
-                    const kevin = 273.15;
-                    const temp = parseInt(res.data.main.temp) - kevin;
-                    const temp_max = parseInt(res.data.main.temp_max) - kevin;
-                    const temp_min = parseInt(res.data.main.temp_min) - kevin;
+                    const kelvin = 273.15;
+                    const temp = parseInt(res.data.main.temp) - kelvin;
+                    const temp_max = parseInt(res.data.main.temp_max) - kelvin;
+                    const temp_min = parseInt(res.data.main.temp_min) - kelvin;
+                    setTemp({temp_max: temp_max, temp_min: temp_min, temp: temp});
                     console.log(temp)
+                    console.log(temperatura.temp)
                 })
                 .catch(error => {
                     console.error('error', error)
@@ -39,6 +42,7 @@ export default function Home() {
         <div>
             <Header />
             <Form llamarAPI={llamarAPI} setCiudad={setCiudad} setPais={setPais} />
+            <Clima temperatura={temperatura}/>
         </div>
     );
 }
