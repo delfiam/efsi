@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/bootstrap.min.css';
 import  '../css/styles.css'
 import ByN from '../img/logo_byn.png'
 import Tel from '../img/tel.png'

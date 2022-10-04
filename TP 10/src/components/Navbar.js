@@ -1,6 +1,5 @@
-
 import Container from 'react-bootstrap/Container'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/bootstrap.min.css';
 import  '../css/styles.css'
 import Logo from '../img/Logo.png'
 export default function Navbarf() {

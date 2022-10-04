@@ -1,5 +1,5 @@
 import './css/styles.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/bootstrap.min.css';
 import Navbarf from './components/Navbar';
 import Footers from './components/Footer';
 import  Carrousel  from './components/Carrousel';
