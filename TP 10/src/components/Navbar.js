@@ -2,21 +2,10 @@ import Container from 'react-bootstrap/Container'
 import '../css/bootstrap.min.css';
 import  '../css/styles.css'
 import Logo from '../img/Logo.png'
+import { Outlet } from 'react-router-dom';
 export default function Navbarf() {
     return (
-        /*
-        <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home"><img src="./img/logo.png" alt="" /></Navbar.Brand>
-          <Nav classNameName="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#features">Quienes somos</Nav.Link>
-            <Nav.Link href="#pricing">Productos</Nav.Link>
-            <Nav.Link href="https://www.youtube.com/watch?v=q4GdJVvdxss">Contacto</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar> */
-
+      <>
       <header className="Container-sm">
             <nav className="navbar navbar-expand-lg bg-light">
                 <Container className="Container">
@@ -30,18 +19,21 @@ export default function Navbarf() {
                         <a className="nav-link active" aria-current="page" href="/#" style={{color: "black"}}>Inicio</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/#" style={{color: "black"}}>Quienes somos</a>
+                        <a className="nav-link" href="/QuienesSomos" style={{color: "black"}}>Quienes somos</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/#" style={{color: "black"}}>Productos</a>
+                        <a className="nav-link" href="/Productos" style={{color: "black"}}>Productos</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/#" style={{color: "black"}}>Contacto</a>
+                        <a className="nav-link" href="/Contacto" style={{color: "black"}}>Contacto</a>
                       </li>
                     </ul>
                   </Container>
                 </Container>
               </nav>
         </header>
+        <Outlet></Outlet>
+        </>
     );
+    
 }

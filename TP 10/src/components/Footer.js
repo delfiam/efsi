@@ -2,9 +2,10 @@ import '../css/bootstrap.min.css';
 import  '../css/styles.css'
 import ByN from '../img/logo_byn.png'
 import Tel from '../img/tel.png'
-
+import { Outlet } from 'react-router-dom';
 export default function Footers(){
     return (
+      <>
       <footer style={{backgroundColor: 'rgba(48,48,48,255)', color: 'white'}} className="d-flex flex-wrap text-bg-dark row row-cols-1 row-cols-sm-2 row-cols-md-5  border-top ">
             <div className="col-md-4 d-flex align-items-center">
               <img src={ByN} className="footerimg" alt="..."/>
@@ -24,5 +25,7 @@ export default function Footers(){
                   </ul>
             </div>
           </footer>
+          <Outlet></Outlet>
+          </>
     )
 }
