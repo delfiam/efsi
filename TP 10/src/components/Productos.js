@@ -1,0 +1,1 @@
+// id, npmbre. añadido (true, false), descripcion, foto
