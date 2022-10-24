@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.Col {
+  text-align: center;
+  vertical-align: middle;
+}
