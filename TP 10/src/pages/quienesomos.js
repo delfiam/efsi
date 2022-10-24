@@ -6,7 +6,6 @@ import Pres from '../components/Presentacion';
 export default function QuienesSomos () {
     return (
         <div>
-        <Navbarf/>
         <Pres/>
         </div>
     )

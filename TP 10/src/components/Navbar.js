@@ -16,7 +16,7 @@ export default function Navbarf() {
                   <Container className="collapse navbar-collapse" id="navbarSupportedConten">
                     <ul className="navbar-nav ms-auto">
                       <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/#" style={{color: "black"}}>Inicio</a>
+                        <a className="nav-link active" aria-current="page" href="/" style={{color: "black"}}>Inicio</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/QuienesSomos" style={{color: "black"}}>Quienes somos</a>
@@ -32,7 +32,6 @@ export default function Navbarf() {
                 </Container>
               </nav>
         </header>
-        <Outlet></Outlet>
         </>
     );
     

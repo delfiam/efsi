@@ -5,17 +5,18 @@ import Footers from "../components/Footer";
 import QuienesSomos from "../pages/quienesomos";
 import ProductosPage from "../pages/productos";
 import Contacto from "../pages/contacto";
+import Layout from "./layout";
 
 export default function Router  (){
     return(
         <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbarf />}></Route>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />}></Route>
           <Route path="/QuienesSomos" element={<QuienesSomos />}></Route>
           <Route path="/Productos" element={<ProductosPage />}></Route>
           <Route path="/Contacto" element={<Contacto />}></Route>
-          <Route path="/" element={<Footers />}></Route>
+         </Route>
         </Routes>
       </BrowserRouter>
     )

@@ -25,7 +25,6 @@ export default function Footers(){
                   </ul>
             </div>
           </footer>
-          <Outlet></Outlet>
           </>
     )
 }

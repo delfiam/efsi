@@ -9,7 +9,6 @@ import Containers from '../components/Container'
 export default function Home() {
   return (
     <div>
-        <Navbarf></Navbarf>
         <Carrousel></Carrousel>
       <div className='container'>
         <div>
@@ -23,9 +22,6 @@ export default function Home() {
           <Containers></Containers>
         </div>
       </div>
-      
-      <Footers></Footers>
-
     </div>
   );
 }
