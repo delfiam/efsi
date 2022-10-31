@@ -40,6 +40,14 @@ export const listadoproductos = [
         descripcion: 'para los campeones',
         foto: 'http://cdn.shopify.com/s/files/1/0364/9614/6491/products/D_Q_NP_962987-MLA45092064266_032021-O.jpg?v=1614881190',
         precio: 1000
+    },
+    {
+        id: 6,
+        nombre: 'Cortina',
+        añadido: false,
+        descripcion: 'necesito una mejor tarjeta gráfica para jugarlo ayuda',
+        foto: 'https://ae01.alicdn.com/kf/S58b891bf0e00498c930756b0db48d3edV.jpg_640x640Q90.jpg_.webp',
+        precio: 25
     }
 
 ]
