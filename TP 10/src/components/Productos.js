@@ -1,6 +1,6 @@
 // id, npmbre. añadido (true, false), descripcion, foto
 
-const listadoproductos = [
+export const listadoproductos = [
     {
         id: 1,
         nombre: 'Inodoro Love Live',
