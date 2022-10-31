@@ -3,6 +3,7 @@ import '../css/bootstrap.min.css';
 import  '../css/styles.css'
 import Logo from '../img/Logo.png'
 import { Outlet } from 'react-router-dom';
+import {HiShoppingCart} from 'react-icons/hi2'
 export default function Navbarf() {
     return (
       <>
@@ -27,6 +28,9 @@ export default function Navbarf() {
                       <li className="nav-item">
                         <a className="nav-link" href="/Contacto" style={{color: "black"}}>Contacto</a>
                       </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="/" style={{color: "blue"}}><HiShoppingCart/></a>
+                        </li>
                     </ul>
                   </Container>
                 </Container>
