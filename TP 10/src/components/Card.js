@@ -11,7 +11,9 @@ export default function Cards() {
     const añadirProducto = (producto) => {
         listadoproductos.map((producto) => {
             producto.añadido = true;
+            
         })
+
     }
     console.log(carrito);
     

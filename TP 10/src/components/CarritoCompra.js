@@ -8,17 +8,16 @@ import ProductosContext from './Context';
 export default function CarritoCompra() {
     const {carrito, setCarrito } = useContext(ProductosContext);
 
-    const eliminarProducto = (producto) => {
-       carrito.filter((item) => item.id !== producto.id);
-       setCarrito(carrito);
-        listadoproductos.map((producto) => {
-            producto.añadido = false;
-        })
+    const eliminarProducto = (id) => {
+        let eliminado = carrito.filter((i, idx) => idx !== id)
+        setCarrito(eliminado);
+        console.log(carrito);
     }
 
     return (
             <div>
                 {carrito.map((producto) => {
+                    producto.id = carrito.indexOf(producto);
                     let imagen = producto.foto;
                     let nombre = producto.nombre;
                     let descripcion = producto.descripcion;
@@ -30,7 +29,7 @@ export default function CarritoCompra() {
                                     <h5 className="card-title">{nombre}</h5>
                                     <p className="card-text">{descripcion}</p>
                                     <p className="card-text">Precio: ${precio}</p>
-                                    <Button variant="primary" onClick={eliminarProducto(producto)}>eliminarProducto</Button>
+                                    <Button variant="primary" onClick={() => eliminarProducto(producto.id)}>eliminarProducto</Button>
                                 </div>
                             </div>
 
