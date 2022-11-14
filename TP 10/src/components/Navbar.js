@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Outlet } from 'react-router-dom';
 import { HiShoppingCart } from 'react-icons/hi2'
 import ProductosContext from './Context';
+import CarritoCompra from './CarritoCompra';
 export default function Navbarf() {
   const { carrito, setCarrito } = useContext(ProductosContext);
   return (
@@ -36,7 +37,7 @@ export default function Navbarf() {
                   <NavDropdown
                     id="nav-dropdown-dark-example"
                     title={<HiShoppingCart />}>
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item ><CarritoCompra/></NavDropdown.Item>
                   </NavDropdown>
                 </li>
               </ul>
