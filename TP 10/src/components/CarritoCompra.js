@@ -6,7 +6,7 @@ import { useState, useContext, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import ProductosContext from './Context';
 export default function CarritoCompra() {
-    const {carrito, setCarrito } = useContext(ProductosContext);
+    const [carrito, setCarrito] = useContext(ProductosContext);
 
     const eliminarProducto = (id) => {
         let eliminado = carrito.filter((i, idx) => idx !== id)

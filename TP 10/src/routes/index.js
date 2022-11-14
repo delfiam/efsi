@@ -12,7 +12,7 @@ import { ProductosProvider } from "../components/Context";
 export default function Router  (){
   const [carrito, setCarrito] = useState([]);
     return(
-      <ProductosProvider value={{carrito, setCarrito}}>
+      <ProductosProvider value={[carrito, setCarrito]}>
         <BrowserRouter>
         <Routes>
         <Route path="/" element={<Layout />}>

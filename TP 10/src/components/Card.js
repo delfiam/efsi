@@ -6,7 +6,7 @@ import { useState, useContext, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import ProductosContext from './Context';
 export default function Cards() {
-    const { carrito, setCarrito } = useContext(ProductosContext);
+    const [ carrito, setCarrito ] = useContext(ProductosContext);
 
     const añadirProducto = (producto) => {
         listadoproductos.map((producto) => {
@@ -36,7 +36,7 @@ export default function Cards() {
                                     <h5 className="card-title">{nombre}</h5>
                                     <p className="card-text">{descripcion}</p>
                                     <p className="card-text">Precio: ${precio}</p>
-                                    <Button variant="primary" onClick={function() {setCarrito(c=> [...c, producto]); añadirProducto()}}>Agregar al carrito</Button>
+                                    <Button variant="primary" onClick={function() { setCarrito(c=> [...c, producto]); añadirProducto()}}>Agregar al carrito</Button>
                                 </div>
                             </div>
                         </div>
